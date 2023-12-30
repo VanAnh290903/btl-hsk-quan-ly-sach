@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67037D3E-E0A5-42EF-AEA5-A2966C7EBE53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BTL_HSK_QLS</RootNamespace>
+    <AssemblyName>BTL_HSK_QLS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crystal Report\CrystalReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crystal Report\CrystalReportViewer.Designer.cs">
+      <DependentUpon>CrystalReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crystal Report\HoaDonCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDonCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal Report\NhanVienCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhanVienCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\QLDTNhanVien.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="Entities\HoaDon.cs" />
+    <Compile Include="Entities\HoaDonChiTiet.cs" />
+    <Compile Include="Entities\KhachHang.cs" />
+    <Compile Include="Entities\LoaiSach.cs" />
+    <Compile Include="Entities\NhanVien.cs" />
+    <Compile Include="Entities\Sach.cs" />
+    <Compile Include="Entities\TaiKhoanDangNhap.cs" />
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuyenNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuyenNV.Designer.cs">
+      <DependentUpon>QuyenNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLDSHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLDSHoaDon.Designer.cs">
+      <DependentUpon>QLDSHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLHoaDonChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLHoaDonChiTiet.Designer.cs">
+      <DependentUpon>QLHoaDonChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLKhachHang.Designer.cs">
+      <DependentUpon>QLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLLoaiSach.Designer.cs">
+      <DependentUpon>QLLoaiSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLNhanVien.Designer.cs">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLSach.Designer.cs">
+      <DependentUpon>QLSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\QLTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\QLTaiKhoan.Designer.cs">
+      <DependentUpon>QLTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\XemHoaDonChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\XemHoaDonChiTiet.Designer.cs">
+      <DependentUpon>XemHoaDonChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\CheckValid.cs" />
+    <Compile Include="Utilities\HamDungChung.cs" />
+    <EmbeddedResource Include="Crystal Report\CrystalReportViewer.resx">
+      <DependentUpon>CrystalReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal Report\HoaDonCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDonCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal Report\NhanVienCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NhanVienCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuyenNV.resx">
+      <DependentUpon>QuyenNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\QLDSHoaDon.resx">
+      <DependentUpon>QLDSHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\QLHoaDonChiTiet.resx">
+      <DependentUpon>QLHoaDonChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\QLKhachHang.resx">
+      <DependentUpon>QLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\QLLoaiSach.resx">
+      <DependentUpon>QLLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\QLNhanVien.resx">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\QLTaiKhoan.resx">
+      <DependentUpon>QLTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\XemHoaDonChiTiet.resx">
+      <DependentUpon>XemHoaDonChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IconHSK\1486506244-help-info-notification-information-sign_81473.png" />
+    <Content Include="IconHSK\1491253400-7document-report_82877.png" />
+    <Content Include="IconHSK\1491254078-7document-report_82917.ico" />
+    <Content Include="IconHSK\3700474-address-agenda-book-bookmark-business-interface-notebook_108749.ico" />
+    <Content Include="IconHSK\3700474-address-agenda-book-bookmark-business-interface-notebook_108749.png" />
+    <Content Include="IconHSK\add_77928.png" />
+    <Content Include="IconHSK\analytics_business_conference_presentation_icon_127218.ico" />
+    <Content Include="IconHSK\analytics_business_conference_presentation_icon_127218.png" />
+    <Content Include="IconHSK\arrow_entrance_in_internet_log_login_security_icon_127060.ico" />
+    <Content Include="IconHSK\book_learning_notebook_reading_study_icon_127253.ico" />
+    <Content Include="IconHSK\book_learning_notebook_reading_study_icon_127253.png" />
+    <Content Include="IconHSK\D_36573.ico" />
+    <Content Include="IconHSK\flat-style-circle-edit_icon-icons.com_66939.png" />
+    <Content Include="IconHSK\Google_Calendar_icon-icons.com_75710.ico" />
+    <Content Include="IconHSK\Google_Calendar_icon-icons.com_75710.png" />
+    <Content Include="IconHSK\iconfinder-document03-1622833_121957.ico" />
+    <Content Include="IconHSK\iconfinder-documents01-1622837_121952.ico" />
+    <Content Include="IconHSK\iconfinder-documents01-1622837_121952.png" />
+    <Content Include="IconHSK\information_info_1565.ico" />
+    <Content Include="IconHSK\information_info_1565.png" />
+    <Content Include="IconHSK\internet_lock_locked_padlock_password_secure_security_icon_127078.ico" />
+    <Content Include="IconHSK\key.png" />
+    <Content Include="IconHSK\Login_37128.ico" />
+    <Content Include="IconHSK\Logout_37127.png" />
+    <Content Include="IconHSK\password_userpassword_9564.ico" />
+    <Content Include="IconHSK\password_userpassword_9564.png" />
+    <Content Include="IconHSK\Personal_user_6031.png" />
+    <Content Include="IconHSK\reload_icon-icons.com_69469.png" />
+    <Content Include="IconHSK\score.ico" />
+    <Content Include="IconHSK\score.png" />
+    <Content Include="IconHSK\search %284%29.png" />
+    <Content Include="IconHSK\seo_training_marketing_presentation_icon_192451.ico" />
+    <Content Include="IconHSK\seo_training_marketing_presentation_icon_192451.png" />
+    <Content Include="IconHSK\student_man_avatar_user_toga_school_university_icon_209264.ico" />
+    <Content Include="IconHSK\student_man_avatar_user_toga_school_university_icon_209264.png" />
+    <Content Include="IconHSK\system_file_manager_wallet_22488.png" />
+    <Content Include="IconHSK\teacherwomanavatar_maestro_muje_2834 %281%29.ico" />
+    <Content Include="IconHSK\teacherwomanavatar_maestro_muje_2834.png" />
+    <Content Include="IconHSK\Tick_Mark_Circle_icon-icons.com_69145.png" />
+    <Content Include="IconHSK\user %281%29.png" />
+    <Content Include="IconHSK\user.png" />
+    <Content Include="IconHSK\userpassword_deusuari_787.ico" />
+    <Content Include="IconHSK\userpassword_deusuari_787.png" />
+    <Content Include="IconHSK\vcsconflicting_93497.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
